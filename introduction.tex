@@ -1,0 +1,35 @@
+\section{Introduction}
+
+\texttt{mlim} is a multiple imputation software package for \textbf{R} language, which uses automated machine learning to fine-tune the models and minimize the imputation error. In addition, \texttt{mlim} uses state-of-the-art computer science procedures to auto-balance imbalance data (see below), which results to fairer imputation, when one category is less represented or appears with lower prevalence. The latter can increase the coefficients estimated from imputed data, which is a big advantage for moving toward automated machine learning solutions for multiple imputations. The difference between \texttt{mlim} \texttt{mlim} automatically fine-tunes the model for imputing each variable, hence, the user is not required to define the parameters of the model and instead, the model is optimized for each variable, while avoiding overfitting. These features, to the author's knowledge, had not been implemented in any R package before. 
+
+This document provides a nice and clean documentation of the package and is occasionally updated with new stable releases. Visit the \doclink{https://github.com/haghish/mlim}{\texttt{mlim} repository on GitHub} to access more materials and tutorials about the package.
+
+
+
+\subsection{Automated machine learning for missing data imputation}
+
+In recent years, there have been several attempts for using machine learning for missing data imputation. Yet, \texttt{mlim} is unique because it is the first \textbf{R} package to implement automated machine learning for multiple imputation and brings the state-of-the-arts of machine learning to provide a versatile missing data solution. But how is automated machine learning any different from other machine learning imputation models? The difference is that automated machine learning algorithms \textit{fine-tune} the models, resulting in more accurate predictions, in contrast to classical (static) machine learning models, where the model's parameters should be specified by the user. When it comes to missing data imputation, instead of setting up an algorithm with pre-specified parameters to impute all the variables of the dataset with the same parameters, we can allow the algorithm to effectively search for the optimal parameters for each variable. This dramatic change in approaching missing data imputation should explain why \texttt{mlim} outperforms other \textbf{R} packages because it optimizes the imputation of each variable. Compared to other \textbf{R} packages, \texttt{mlim} provides a better multiple imputation procedure because: 
+
+\begin{enumerate}
+    \item It automatically fine-tunes the parameters of each machine learning model for each variable
+    
+    \item It delivers a higher prediction accuracy, hence, lower imputation error
+    
+    \item It is a fairer algorithm to minorities, correcting for biases emerging from imbalanced data
+    
+    \item Does not make any assumption about the distributions of the variables
+    
+    \item Takes the interactions between the variables into account
+    
+    \item Does not enforce linear relations between the predictors
+    
+    \item Uses a blend of different machine learning models
+    
+    \item Implements a sophisticated procedure for optimizing imputed data with different algorithms
+
+\end{enumerate}
+
+
+
+
+

@@ -1,0 +1,6 @@
+\section{Single imputation}
+
+Traditionally, multiple imputation have been the golden standards if treating missing data because they allow to estimate the uncertainty in guessing the missing observations and that uncertainty is desired. However, multiple imputation is not the only way of making such assessment about the imputed values. Random Forest machine learning algorithm can provide Out Of Bag (OOB) error estimate, which also estimate the prediction error. 
+
+Although \texttt{mlim} can carry out multiple imputation, it can also be used to carry out a single imputation. Yet, \texttt{mlim} can provide estimates of imputation accuracy via Cross Validation metrics. The \texttt{mlim.summarize} function can print the accuracy of the imputation for each imputed variable:
+
