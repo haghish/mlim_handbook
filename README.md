@@ -12,4 +12,5 @@ E. F. Haghish
 
 ## Download the latest version of the handbook below
 
+<a href="https://github.com/haghish/mlim_handbook"><img src='figures/handbook.png' align="left" height="200" /></a>
 
